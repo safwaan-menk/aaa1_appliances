@@ -1,0 +1,134 @@
+.nav {
+    width: 100%;
+    max-width: 100vw;
+    padding: 1rem 5%;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.leftSide, .rightSide {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.logoLink {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: auto;
+    width: 80px;
+}
+
+.desktopLinks {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.link {
+    color: #333;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 0.5rem 0.75rem;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.link:hover {
+    background-color: #5214c5;
+    color: white;
+}
+
+.mobileMenuButton {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.menuIcon {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    position: relative;
+    transition: all 0.2s ease;
+}
+
+.menuIcon::before,
+.menuIcon::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    transition: all 0.2s ease;
+}
+
+.menuIcon::before {
+    top: -8px;
+}
+
+.menuIcon::after {
+    bottom: -8px;
+}
+
+.mobileMenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: white;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.mobileLink {
+    display: block;
+    color: #333;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 1rem;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.mobileLink:hover {
+    background-color: #5214c5;
+    color: white;
+}
+
+@media (max-width: 1024px) {
+    .desktopLinks {
+        display: none;
+    }
+
+    .mobileMenuButton {
+        display: block;
+    }
+
+    .mobileMenu {
+        display: block;
+    }
+
+    .nav {
+        padding: 1rem 5%;
+    }
+
+    .logo {
+        width: 60px;
+    }
+}
